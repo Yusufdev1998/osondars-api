@@ -1,11 +1,8 @@
 import app from "./app.js";
-import { initGithubAuth } from "./auth/strategies/github.strategy.js";
-import { initGoogleAuth } from "./auth/strategies/google.strategy.js";
+import { initAuthProviders } from "./auth/strategies/index.js";
 import { connectMongo } from "./config/mongo.config.js";
 
-initGithubAuth();
-initGoogleAuth();
-
+initAuthProviders();
 async function init() {
   await connectMongo();
   app.listen(8080, () => {

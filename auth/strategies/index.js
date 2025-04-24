@@ -1,5 +1,5 @@
-import { initGithubAuth } from "./github.strategy";
-import { initGoogleAuth } from "./google.strategy";
+import { initGithubAuth } from "./github.strategy.js";
+import { initGoogleAuth } from "./google.strategy.js";
 
 export function initAuthProviders() {
   initGithubAuth();

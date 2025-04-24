@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 const lessonSchema = new mongoose.Schema({
   title: String,
   video_url: String,
+  duration: Number,
   content: String,
 });
 const moduleSchema = new mongoose.Schema({
@@ -16,6 +17,7 @@ const courseSchema = new mongoose.Schema({
   categories: Array,
   price: Number,
   is_free: Boolean,
+  author_id: String,
   modules: [moduleSchema],
 });
 
